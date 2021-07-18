@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerClickHandler
 {
     private RectTransform dragRectTransform;
     private Canvas canvas;
@@ -14,6 +14,12 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         dragRectTransform = GetComponent<RectTransform>();
         canvas = FindObjectOfType<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    public void OnPointerClick(PointerEventData eventData) {
+        if (itemSlot != null)
+            itemSlot.GetComponent<ItemSlot>().inventoryController.SetHighlightedItem(itemSlot.GetComponent<ItemSlot>());
+        //transform.GetChild(1).gameObject.SetActive(true);
     }
 
     public void OnBeginDrag(PointerEventData eventData) {

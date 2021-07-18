@@ -8,6 +8,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     public string attachedCharacter; // TODO: Change to characterclass
     private Vector2 centerPos;
     public GameObject attachedItem; // TODO: Change this to an item.
+    public InventoryController inventoryController;
 
     public bool acceptsItems = true;
     public bool acceptsUsable = false;
@@ -28,6 +29,10 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             if (eventData.pointerDrag.GetComponent<DragItem>().itemSlot != null)
                 eventData.pointerDrag.GetComponent<DragItem>().itemSlot.GetComponent<ItemSlot>().attachedItem = null;
             eventData.pointerDrag.GetComponent<DragItem>().itemSlot = gameObject;
+            if (inventoryController != null && attachedItem != null) {
+                inventoryController.SetHighlightedItem(this);
+                //attachedItem.transform.GetChild(1).gameObject.SetActive(true);
+            }
         }
     }
 
