@@ -7,6 +7,7 @@ public class InventoryController : MonoBehaviour
 {
     public Text text;
     List<ItemSlot> itemSlots;
+    List<ItemSlot> equipmentSlots;
 
     public ItemSlot highlightedItemSlot;
 
@@ -15,8 +16,13 @@ public class InventoryController : MonoBehaviour
     {
         text = transform.GetChild(2).GetChild(4).GetChild(0).GetChild(0).GetComponent<Text>();
         itemSlots = new List<ItemSlot>();
+        equipmentSlots = new List<ItemSlot>();
         foreach (ItemSlot item in transform.GetChild(2).GetChild(0).GetComponentsInChildren<ItemSlot>()) {
             itemSlots.Add(item);
+            item.inventoryController = this;
+        }
+        foreach (ItemSlot item in transform.GetChild(2).GetChild(3).GetComponentsInChildren<ItemSlot>()) {
+            equipmentSlots.Add(item);
             item.inventoryController = this;
         }
 

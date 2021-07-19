@@ -641,7 +641,7 @@ ScriptsOnlyBuild:
     className: ItemObject
   - hash:
       serializedVersion: 2
-      Hash: 4ce15e99c635d2567873d27549d1f16f
+      Hash: fc811b150352dfdccbd3063c30b2236a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InventoryController

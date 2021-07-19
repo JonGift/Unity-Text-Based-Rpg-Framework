@@ -23,7 +23,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     }
 
     public void OnDrop(PointerEventData eventData) {
-        if (eventData.pointerDrag != null) {
+        if (eventData.pointerDrag != null && attachedItem == null) {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             attachedItem = eventData.pointerDrag.gameObject;
             if (eventData.pointerDrag.GetComponent<DragItem>().itemSlot != null)
@@ -31,7 +31,6 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             eventData.pointerDrag.GetComponent<DragItem>().itemSlot = gameObject;
             if (inventoryController != null && attachedItem != null) {
                 inventoryController.SetHighlightedItem(this);
-                //attachedItem.transform.GetChild(1).gameObject.SetActive(true);
             }
         }
     }
