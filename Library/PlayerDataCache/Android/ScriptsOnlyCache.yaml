@@ -75,27 +75,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12104}
     - Class: 114
-      Script: {instanceID: 12244}
+      Script: {instanceID: 12206}
     - Class: 114
-      Script: {instanceID: 12278}
+      Script: {instanceID: 12246}
     - Class: 114
-      Script: {instanceID: 12628}
+      Script: {instanceID: 12280}
     - Class: 114
-      Script: {instanceID: 12888}
+      Script: {instanceID: 12632}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 12696}
     - Class: 114
-      Script: {instanceID: 13134}
+      Script: {instanceID: 12896}
     - Class: 114
-      Script: {instanceID: 13748}
+      Script: {instanceID: 12992}
     - Class: 114
-      Script: {instanceID: 13958}
+      Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 14362}
+      Script: {instanceID: 13756}
     - Class: 114
-      Script: {instanceID: 21036}
+      Script: {instanceID: 13966}
     - Class: 114
-      Script: {instanceID: 21052}
+      Script: {instanceID: 14370}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -317,6 +317,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: fc811b150352dfdccbd3063c30b2236a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InventoryController
+  - hash:
+      serializedVersion: 2
       Hash: 78664a3ff7eeb37b306342570dd71c55
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -381,6 +387,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 68316afbe66a376626ae3ba04ae51edf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemObject
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -633,18 +645,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 68316afbe66a376626ae3ba04ae51edf
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ItemObject
-  - hash:
-      serializedVersion: 2
-      Hash: fc811b150352dfdccbd3063c30b2236a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: InventoryController
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
