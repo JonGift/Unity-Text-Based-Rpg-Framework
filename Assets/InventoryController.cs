@@ -43,4 +43,44 @@ public class InventoryController : MonoBehaviour
         text.text = "";
         highlightedItemSlot = null;
     }
+
+    public List<Item> GetEquipment() {
+        List<Item> items = new List<Item>();
+        foreach (ItemSlot slot in equipmentSlots) {
+            Item item = slot.GetItem();
+            if (item != null)
+                items.Add(item);
+        }
+
+        Debug.Log(items);
+        return items;
+    }
+
+    public void LockSlots(Item item, ItemSlot originalSlot) {
+        foreach(string type in item.Types)
+            foreach(ItemSlot slot in equipmentSlots) {
+                if (slot == originalSlot)
+                    continue;
+                if (slot.slotType == type)
+                    slot.ToggleLocked(true);
+            }
+    }
+    public void UnlockSlots(Item item, ItemSlot originalSlot) {
+        foreach (string type in item.Types)
+            foreach (ItemSlot slot in equipmentSlots) {
+                if (slot == originalSlot)
+                    continue;
+                if (slot.slotType == type)
+                    slot.ToggleLocked(false);
+            }
+    }
+
+    public bool CheckIfCanLock(Item item) {
+        foreach (string type in item.Types)
+            foreach (ItemSlot slot in equipmentSlots) 
+                if (slot.slotType == type && (slot.GetLocked() || slot.attachedItem != null))
+                    return false;
+
+        return true;
+    }
 }
