@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
+    public Canvas parentCanvas;
+
     Vector2 startPos;
     private void Awake() {
         startPos = transform.position;
@@ -13,4 +15,5 @@ public class MenuController : MonoBehaviour
         transform.position = startPos;
         gameObject.SetActive(!gameObject.activeSelf);
     }
+
 }

@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
     public string attachedCharacter; // TODO: Change to characterclass
-    private Vector2 centerPos;
     public GameObject attachedItem; // TODO: Change this to an item.
     public InventoryController inventoryController;
     public string slotType = ""; // Can be empty. If not empty, it's specifically associated with a certain type of item (like a helmet)
@@ -16,13 +15,6 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     public bool acceptsUsable = false;
     public bool acceptsKey = false;
     public bool acceptsEquipment = false;
-
-
-    // Start is called before the first frame update
-    void Awake()
-    {
-        centerPos = transform.position;
-    }
 
     public void OnDrop(PointerEventData eventData) {
         if (eventData.pointerDrag != null && attachedItem == null && !slotLocked) {

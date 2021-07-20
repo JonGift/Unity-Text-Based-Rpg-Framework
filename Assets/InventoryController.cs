@@ -9,6 +9,8 @@ public class InventoryController : MonoBehaviour
     List<ItemSlot> itemSlots;
     List<ItemSlot> equipmentSlots;
 
+    List<ItemSlot> equippedItemSlots;
+
     public ItemSlot highlightedItemSlot;
 
     // Start is called before the first frame update
@@ -17,14 +19,23 @@ public class InventoryController : MonoBehaviour
         text = transform.GetChild(2).GetChild(4).GetChild(0).GetChild(0).GetComponent<Text>();
         itemSlots = new List<ItemSlot>();
         equipmentSlots = new List<ItemSlot>();
+        equippedItemSlots = new List<ItemSlot>();
         foreach (ItemSlot item in transform.GetChild(2).GetChild(0).GetComponentsInChildren<ItemSlot>()) {
             itemSlots.Add(item);
             item.inventoryController = this;
         }
+
+        // TODO: These get moved to the character screen.
         foreach (ItemSlot item in transform.GetChild(2).GetChild(3).GetComponentsInChildren<ItemSlot>()) {
-            equipmentSlots.Add(item);
+            if(item.slotType == "") {
+                equipmentSlots.Add(item);
+            } else {
+                equippedItemSlots.Add(item);
+            }
+
             item.inventoryController = this;
         }
+
 
     }
 
@@ -39,6 +50,7 @@ public class InventoryController : MonoBehaviour
     }
 
     public void DiscardItem() {
+        UnlockSlots(highlightedItemSlot.attachedItem.GetComponent<ItemObject>().item, highlightedItemSlot);
         Destroy(highlightedItemSlot.attachedItem.gameObject);
         text.text = "";
         highlightedItemSlot = null;
@@ -46,19 +58,18 @@ public class InventoryController : MonoBehaviour
 
     public List<Item> GetEquipment() {
         List<Item> items = new List<Item>();
-        foreach (ItemSlot slot in equipmentSlots) {
+        foreach (ItemSlot slot in equippedItemSlots) {
             Item item = slot.GetItem();
             if (item != null)
                 items.Add(item);
         }
 
-        Debug.Log(items);
         return items;
     }
 
     public void LockSlots(Item item, ItemSlot originalSlot) {
         foreach(string type in item.Types)
-            foreach(ItemSlot slot in equipmentSlots) {
+            foreach(ItemSlot slot in equippedItemSlots) {
                 if (slot == originalSlot)
                     continue;
                 if (slot.slotType == type)
@@ -67,7 +78,7 @@ public class InventoryController : MonoBehaviour
     }
     public void UnlockSlots(Item item, ItemSlot originalSlot) {
         foreach (string type in item.Types)
-            foreach (ItemSlot slot in equipmentSlots) {
+            foreach (ItemSlot slot in equippedItemSlots) {
                 if (slot == originalSlot)
                     continue;
                 if (slot.slotType == type)
@@ -77,7 +88,7 @@ public class InventoryController : MonoBehaviour
 
     public bool CheckIfCanLock(Item item) {
         foreach (string type in item.Types)
-            foreach (ItemSlot slot in equipmentSlots) 
+            foreach (ItemSlot slot in equippedItemSlots) 
                 if (slot.slotType == type && (slot.GetLocked() || slot.attachedItem != null))
                     return false;
 

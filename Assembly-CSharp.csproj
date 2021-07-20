@@ -68,6 +68,7 @@
     <Compile Include="Assets\Item.cs" />
     <Compile Include="Assets\ItemObject.cs" />
     <Compile Include="Assets\Items.cs" />
+    <Compile Include="Assets\PanelOpener.cs" />
     <Compile Include="Assets\Scripts\DragItem.cs" />
     <Compile Include="Assets\Scripts\DragWindow.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
