@@ -1,4 +1,4 @@
-Text-Based Rpg Framework
+Unity Text-Based Rpg Framework
 ======
 
 The goal of this project is to develop a system for a more in-depth text adventure-like RPG. Some of the planned features are listed below:
@@ -10,6 +10,8 @@ The goal of this project is to develop a system for a more in-depth text adventu
 - Journal system designed to save dialogue that the player chooses for better storytelling
 - Usable on Android. Future support for iOS is planned. 
 
+Some images of the current progress can be seen here:
+![UI](https://github.com/JonGift/Unity-Text-Based-Rpg-Framework/blob/main/Progress%20Images/UIImage.png?raw=true)
 
 Installation
 ============
