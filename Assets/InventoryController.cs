@@ -67,6 +67,16 @@ public class InventoryController : MonoBehaviour
         return items;
     }
 
+    public ItemSlot GetNextOpenItemSlot() {
+        foreach(ItemSlot slot in itemSlots) {
+            Item item = slot.GetItem();
+            if (item == null)
+                return slot;
+        }
+
+        return null;
+    }
+
     public void LockSlots(Item item, ItemSlot originalSlot) {
         foreach(string type in item.Types)
             foreach(ItemSlot slot in equippedItemSlots) {

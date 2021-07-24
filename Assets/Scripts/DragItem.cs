@@ -9,6 +9,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     private Canvas canvas;
     private CanvasGroup canvasGroup;
     public GameObject itemSlot;
+    private InventoryController inventoryController;
 
     int spriteOrder;
 
@@ -17,9 +18,13 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         canvas = FindObjectOfType<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
         spriteOrder = transform.GetChild(1).GetComponent<SpriteRenderer>().sortingOrder;
+        inventoryController = FindObjectOfType<InventoryController>();
     }
 
     public void OnPointerClick(PointerEventData eventData) {
+        if (eventData.button == PointerEventData.InputButton.Right && GetComponent<ItemObject>().itemType == "") {
+            inventoryController.GetNextOpenItemSlot().ForcePickUpItem(this.gameObject);
+        }
         if (itemSlot != null)
             itemSlot.GetComponent<ItemSlot>().inventoryController.SetHighlightedItem(itemSlot.GetComponent<ItemSlot>());
         //transform.GetChild(1).gameObject.SetActive(true);

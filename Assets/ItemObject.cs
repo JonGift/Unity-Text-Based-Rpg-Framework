@@ -8,6 +8,7 @@ public class ItemObject : MonoBehaviour
     public string itemId; // When instantiated, this object finds this item from the items list.
     public Item item;
     public bool temp;
+    public string itemType = "";
     Text text;
 
     private void Awake() {
@@ -22,6 +23,8 @@ public class ItemObject : MonoBehaviour
             text.transform.parent.gameObject.SetActive(true);
         }
 
+        if (item.Types.Count > 0)
+            itemType = item.Types[0];
     }
 
 }

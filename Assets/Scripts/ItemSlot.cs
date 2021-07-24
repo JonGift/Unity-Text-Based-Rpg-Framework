@@ -18,27 +18,32 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData) {
         if (eventData.pointerDrag != null && attachedItem == null && !slotLocked) {
-
-            if(eventData.pointerDrag.GetComponent<ItemObject>().item.Types.Count > 0 && slotType != "") {
-                string type = eventData.pointerDrag.GetComponent<ItemObject>().item.Types[0];
-                if (type != slotType)
-                    return;
-
-                if (!inventoryController.CheckIfCanLock(eventData.pointerDrag.GetComponent<ItemObject>().item))
-                    return;
-            }
-
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            attachedItem = eventData.pointerDrag.gameObject;
-            if (eventData.pointerDrag.GetComponent<DragItem>().itemSlot != null)
-                eventData.pointerDrag.GetComponent<DragItem>().itemSlot.GetComponent<ItemSlot>().RemoveAttachedItem();
-            eventData.pointerDrag.GetComponent<DragItem>().itemSlot = gameObject;
-            if (inventoryController != null && attachedItem != null) {
-                inventoryController.SetHighlightedItem(this);
-                if(slotType != "")
-                    inventoryController.LockSlots(GetItem(), this);
-            }
+            AttachItem(eventData.pointerDrag);
         }
+    }
+
+    bool AttachItem(GameObject itemObj) {
+        if (itemObj.GetComponent<ItemObject>().item.Types.Count > 0 && slotType != "") {
+            string type = itemObj.GetComponent<ItemObject>().item.Types[0];
+            if (type != slotType)
+                return false;
+
+            if (!inventoryController.CheckIfCanLock(itemObj.GetComponent<ItemObject>().item))
+                return false;
+        }
+
+        itemObj.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+        attachedItem = itemObj.gameObject;
+        if (itemObj.GetComponent<DragItem>().itemSlot != null)
+            itemObj.GetComponent<DragItem>().itemSlot.GetComponent<ItemSlot>().RemoveAttachedItem();
+        itemObj.GetComponent<DragItem>().itemSlot = gameObject;
+        if (inventoryController != null && attachedItem != null) {
+            inventoryController.SetHighlightedItem(this);
+            if (slotType != "")
+                inventoryController.LockSlots(GetItem(), this);
+        }
+
+        return true;
     }
 
     public void ToggleLocked(bool tf) {
@@ -58,6 +63,15 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
     public bool hasItem() {
         return attachedItem != null;
+    }
+
+    // This function allows us to place items in an inventory without dragging them (ie right-click)
+    public void ForcePickUpItem(GameObject dragItemObj) {
+        // TODO: Need to force parent the item to the correct inventory window.
+        if (slotLocked || attachedItem != null)
+            return;
+
+        AttachItem(dragItemObj);
     }
 
     // get item
