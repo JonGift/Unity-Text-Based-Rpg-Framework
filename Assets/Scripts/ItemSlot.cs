@@ -16,13 +16,33 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     public bool acceptsKey = false;
     public bool acceptsEquipment = false;
 
+    private void Start() {
+        if (attachedItem) {
+            AttachItem(attachedItem);
+        }
+    }
+
     public void OnDrop(PointerEventData eventData) {
         if (eventData.pointerDrag != null && attachedItem == null && !slotLocked) {
             AttachItem(eventData.pointerDrag);
         }
     }
 
+
+    // TODO: Add in key items and use items
+    public bool CheckIfCanAttach(GameObject itemObj) {
+        if (itemObj.GetComponent<ItemObject>().itemType == "" && !acceptsItems)
+            return false;
+
+        if (itemObj.GetComponent<ItemObject>().itemType != "" && !acceptsEquipment)
+            return false;
+
+        return true;
+    }
     bool AttachItem(GameObject itemObj) {
+        if (!CheckIfCanAttach(itemObj))
+            return false;
+
         if (itemObj.GetComponent<ItemObject>().item.Types.Count > 0 && slotType != "") {
             string type = itemObj.GetComponent<ItemObject>().item.Types[0];
             if (type != slotType)
@@ -66,12 +86,12 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     }
 
     // This function allows us to place items in an inventory without dragging them (ie right-click)
-    public void ForcePickUpItem(GameObject dragItemObj) {
+    public bool ForcePickUpItem(GameObject dragItemObj) {
         // TODO: Need to force parent the item to the correct inventory window.
         if (slotLocked || attachedItem != null)
-            return;
+            return false;
 
-        AttachItem(dragItemObj);
+        return AttachItem(dragItemObj);
     }
 
     // get item

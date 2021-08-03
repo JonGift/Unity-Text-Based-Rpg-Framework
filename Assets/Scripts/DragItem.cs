@@ -19,14 +19,25 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         canvasGroup = GetComponent<CanvasGroup>();
         spriteOrder = transform.GetChild(1).GetComponent<SpriteRenderer>().sortingOrder;
         inventoryController = FindObjectOfType<InventoryController>();
+        if(inventoryController == null) // is in loot window
+            inventoryController = transform.parent.parent.GetChild(0).GetComponent<InventoryController>();
     }
 
     public void OnPointerClick(PointerEventData eventData) {
-        if (eventData.button == PointerEventData.InputButton.Right && GetComponent<ItemObject>().itemType == "") {
-            inventoryController.GetNextOpenItemSlot().ForcePickUpItem(this.gameObject);
+        if (eventData.button == PointerEventData.InputButton.Right) {
+            inventoryController.SetItemParent(this.gameObject);
+            if(GetComponent<ItemObject>().itemType == "")
+                inventoryController.GetNextOpenItemSlot().ForcePickUpItem(this.gameObject);
+            else if (GetComponent<ItemObject>().itemType == "Use")
+                inventoryController.GetNextOpenUseSlot().ForcePickUpItem(this.gameObject);
+            else if (GetComponent<ItemObject>().itemType == "Key")
+                inventoryController.GetNextOpenKeySlot().ForcePickUpItem(this.gameObject);
+            else
+                inventoryController.GetNextOpenEquipSlot().ForcePickUpItem(this.gameObject);
         }
         if (itemSlot != null)
-            itemSlot.GetComponent<ItemSlot>().inventoryController.SetHighlightedItem(itemSlot.GetComponent<ItemSlot>());
+            if(itemSlot.GetComponent<ItemSlot>().inventoryController != null)
+                itemSlot.GetComponent<ItemSlot>().inventoryController.SetHighlightedItem(itemSlot.GetComponent<ItemSlot>());
         //transform.GetChild(1).gameObject.SetActive(true);
     }
 
@@ -50,8 +61,10 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         foreach (SpriteRenderer spr in GetComponentsInChildren<SpriteRenderer>())
             spr.sortingOrder = spriteOrder;
         if (itemSlot) {
-            GetComponent<RectTransform>().anchoredPosition = itemSlot.GetComponent<RectTransform>().anchoredPosition;
-            itemSlot.GetComponent<ItemSlot>().attachedItem = gameObject;
+            if (itemSlot.GetComponent<ItemSlot>().CheckIfCanAttach(gameObject)) {
+                inventoryController.SetItemParent(this.gameObject);
+                GetComponent<RectTransform>().anchoredPosition = itemSlot.GetComponent<RectTransform>().anchoredPosition;
+            }
         }
     }
 

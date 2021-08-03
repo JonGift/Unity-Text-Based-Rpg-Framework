@@ -67,8 +67,52 @@ public class InventoryController : MonoBehaviour
         return items;
     }
 
+    public void SetItemParent(GameObject itemObj) {
+        if(itemObj.GetComponent<ItemObject>().itemType == "") {
+            itemObj.transform.SetParent(transform.GetChild(2).GetChild(0));
+        }
+        else if (itemObj.GetComponent<ItemObject>().itemType == "Use") {
+            itemObj.transform.SetParent(transform.GetChild(2).GetChild(1));
+        }
+        else if (itemObj.GetComponent<ItemObject>().itemType == "Key") {
+            itemObj.transform.SetParent(transform.GetChild(2).GetChild(2));
+        }
+        else {
+            itemObj.transform.SetParent(transform.GetChild(2).GetChild(3));
+        }
+    }
+
     public ItemSlot GetNextOpenItemSlot() {
         foreach(ItemSlot slot in itemSlots) {
+            Item item = slot.GetItem();
+            if (item == null)
+                return slot;
+        }
+
+        return null;
+    }
+
+    public ItemSlot GetNextOpenUseSlot() {
+        foreach (ItemSlot slot in itemSlots) {
+            Item item = slot.GetItem();
+            if (item == null)
+                return slot;
+        }
+
+        return null;
+    }
+
+    public ItemSlot GetNextOpenKeySlot() {
+        foreach (ItemSlot slot in itemSlots) {
+            Item item = slot.GetItem();
+            if (item == null)
+                return slot;
+        }
+
+        return null;
+    }
+    public ItemSlot GetNextOpenEquipSlot() {
+        foreach (ItemSlot slot in equipmentSlots) {
             Item item = slot.GetItem();
             if (item == null)
                 return slot;
