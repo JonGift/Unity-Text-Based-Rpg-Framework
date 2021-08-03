@@ -179,6 +179,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &7752338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,6 +351,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &33327223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,6 +769,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &83978927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1413,6 +1416,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &201038795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1694,6 +1698,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &216382914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2077,6 +2082,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &248549912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2479,6 +2485,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &273719022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3298,6 +3305,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &370815163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4034,6 +4042,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &439689525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4550,6 +4559,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &495462424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4645,6 +4655,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &501956900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4991,6 +5002,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &594085106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5927,6 +5939,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &682189633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6022,6 +6035,7 @@ MonoBehaviour:
   acceptsUsable: 1
   acceptsKey: 1
   acceptsEquipment: 1
+  lootWindow: 1
 --- !u!114 &682534254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6117,6 +6131,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &683631222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6293,6 +6308,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &689372567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6618,6 +6634,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &728477977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7012,6 +7029,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &801271813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7259,6 +7277,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &832110345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7474,6 +7493,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &835425152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8119,6 +8139,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &886125196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8214,6 +8235,7 @@ MonoBehaviour:
   acceptsUsable: 1
   acceptsKey: 1
   acceptsEquipment: 1
+  lootWindow: 1
 --- !u!114 &893083404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8838,6 +8860,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &928732384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8933,6 +8956,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &934526812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9028,6 +9052,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &937768972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9203,6 +9228,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &942307102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9611,6 +9637,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &960940878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9742,6 +9769,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &981119317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10034,6 +10062,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &991372536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10206,6 +10235,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &998624963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10619,6 +10649,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1042558013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10814,6 +10845,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1097332215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11480,6 +11512,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1143252838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11575,6 +11608,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1149807009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12717,6 +12751,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1321676891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12812,6 +12847,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1334273522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13569,6 +13605,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1390321215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13742,6 +13779,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1415809648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13936,6 +13974,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1435090407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14151,6 +14190,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1473187622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14246,6 +14286,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1485065398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14341,6 +14382,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1488051614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14805,6 +14847,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1509196735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15052,6 +15095,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1543634508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15302,6 +15346,7 @@ MonoBehaviour:
   acceptsUsable: 1
   acceptsKey: 1
   acceptsEquipment: 1
+  lootWindow: 1
 --- !u!114 &1604299833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15478,6 +15523,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1617161143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15651,6 +15697,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1637147495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16013,6 +16060,7 @@ MonoBehaviour:
   acceptsUsable: 1
   acceptsKey: 1
   acceptsEquipment: 1
+  lootWindow: 1
 --- !u!114 &1679154247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16208,6 +16256,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1706348481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16303,6 +16352,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1707862588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16644,6 +16694,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1757883684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16739,6 +16790,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1760839214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16834,6 +16886,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1767654714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17424,6 +17477,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1819716609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17519,6 +17573,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1845715974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17614,6 +17669,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1857408678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17709,6 +17765,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1864416643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17912,6 +17969,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1886211975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18007,6 +18065,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1905502340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18102,6 +18161,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1905907489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18197,6 +18257,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1907191089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18393,6 +18454,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &1957179077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18488,6 +18550,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &1965276453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19502,6 +19565,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &2054416321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19597,6 +19661,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 0
+  lootWindow: 0
 --- !u!114 &2057839036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19851,6 +19916,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &2078545788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20024,6 +20090,7 @@ MonoBehaviour:
   acceptsUsable: 1
   acceptsKey: 1
   acceptsEquipment: 1
+  lootWindow: 1
 --- !u!114 &2099445387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20197,6 +20264,7 @@ MonoBehaviour:
   acceptsUsable: 0
   acceptsKey: 0
   acceptsEquipment: 1
+  lootWindow: 0
 --- !u!114 &2130568724
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -62,7 +62,8 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
             spr.sortingOrder = spriteOrder;
         if (itemSlot) {
             if (itemSlot.GetComponent<ItemSlot>().CheckIfCanAttach(gameObject)) {
-                inventoryController.SetItemParent(this.gameObject);
+                if(itemSlot.GetComponent<ItemSlot>().inventoryController != null)
+                    inventoryController.SetItemParent(this.gameObject);
                 GetComponent<RectTransform>().anchoredPosition = itemSlot.GetComponent<RectTransform>().anchoredPosition;
             }
         }

@@ -15,6 +15,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     public bool acceptsUsable = false;
     public bool acceptsKey = false;
     public bool acceptsEquipment = false;
+    public bool lootWindow = false;
 
     private void Start() {
         if (attachedItem) {
@@ -23,7 +24,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     }
 
     public void OnDrop(PointerEventData eventData) {
-        if (eventData.pointerDrag != null && attachedItem == null && !slotLocked) {
+        if (eventData.pointerDrag != null && attachedItem == null && !slotLocked && !lootWindow) {
             AttachItem(eventData.pointerDrag);
         }
     }

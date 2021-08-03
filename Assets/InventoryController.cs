@@ -44,8 +44,31 @@ public class InventoryController : MonoBehaviour
             if(highlightedItemSlot.attachedItem)
                 highlightedItemSlot.attachedItem.transform.GetChild(1).gameObject.SetActive(false);
         highlightedItemSlot = itemSlot;
+        if (!highlightedItemSlot.attachedItem)
+            return;
         highlightedItemSlot.attachedItem.transform.GetChild(1).gameObject.SetActive(true);
-        text.text = itemSlot.attachedItem.GetComponent<ItemObject>().item.Description;
+        ItemObject temp = itemSlot.attachedItem.GetComponent<ItemObject>();
+        text.text = temp.item.Description + "\n\n";
+        if (temp.itemType == "")
+            text.text += "Type: Misc";
+        else if (temp.itemType == "Key")
+            text.text += "Type: Key Item";
+        else if (temp.itemType == "Use")
+            text.text += "Type: Useable";
+        else
+            text.text += "Type: " + temp.itemType;
+
+        if (temp.item.Types.Count > 1) {
+            text.text += "\n\nSlots: ";
+            for(int i = 0; i < temp.item.Types.Count; i++) {
+                text.text += temp.item.Types[i];
+                if (i < temp.item.Types.Count - 1)
+                    text.text += ", ";
+            }
+        }
+
+        text.text += "\n\nCount: " + temp.item.Stack;
+
         transform.GetChild(2).GetChild(5).GetChild(1).GetComponent<Button>().interactable = true;
     }
 
