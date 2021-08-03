@@ -33,4 +33,22 @@ public class Item
         foreach (string type in types)
             Types.Add(type);
     }
+
+    public Item(Item templateItem) {
+        Id = templateItem.Id;
+        Name = templateItem.Name;
+        DisplayName = templateItem.DisplayName;
+        Description = templateItem.Description;
+        ShortDescription = templateItem.ShortDescription;
+
+        Types = new List<string>();
+
+        Value = templateItem.Value;
+        Weight = templateItem.Weight;
+        MaxStack = templateItem.MaxStack;
+        Stack = templateItem.Stack;
+
+        foreach (string type in templateItem.Types)
+            Types.Add(type);
+    }
 }

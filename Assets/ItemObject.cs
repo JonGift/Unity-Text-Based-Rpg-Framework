@@ -13,9 +13,9 @@ public class ItemObject : MonoBehaviour
 
     private void Awake() {
         text = transform.GetChild(0).GetChild(1).GetComponent<Text>();
-        item = Items.normalRock;
+        item = new Item(Items.normalRock);
         if (temp)
-            item = Items.specialRock;
+            item = new Item(Items.specialRock);
 
         if(item.MaxStack > 1) {
             item.Stack = Random.Range(5, 90);
