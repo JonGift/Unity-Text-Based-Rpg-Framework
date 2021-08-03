@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     void PrintPos() {
         string text = textComp.text;
 
-        if (charIndex >= text.Length)
+        if (charIndex >= text.Length + 1)
             return;
 
         TextGenerator textGen = new TextGenerator(text.Length);
@@ -44,23 +44,26 @@ public class GameManager : MonoBehaviour
             print(avgPos);
             Vector3 worldPos = textComp.transform.TransformPoint(avgPos) / canvas.scaleFactor;
             print(canvas.scaleFactor);
-            //Instantiate(tempGuy, worldPos, Quaternion.identity, textComp.transform);
-            PrintWorldPos(avgPos);
+            Instantiate(tempGuy, worldPos, Quaternion.identity, textComp.transform);
+            //PrintWorldPos(avgPos);
         } else {
             Debug.LogError("Out of text bound");
         }
     }
 
     public void TestText() {
-        PrintPos();
+        charIndex = textComp.text.IndexOf("~~");
         charIndex++;
+        Debug.Log(charIndex);
+        PrintPos();
+        //charIndex++;
     }
 
     void PrintWorldPos(Vector3 testPoint) {
         Vector3 worldPos = textComp.transform.TransformPoint(testPoint);
         print(worldPos);
         new GameObject("point").transform.position = worldPos / canvas.scaleFactor;
-        Debug.DrawRay(worldPos, Vector3.up, Color.red, 50f);
+        Debug.DrawRay(worldPos / canvas.scaleFactor, Vector3.up, Color.red, 50f);
     }
 
     public void OutText(string content) {

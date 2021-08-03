@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TextManager : MonoBehaviour
 {
@@ -58,7 +59,8 @@ public class TextManager : MonoBehaviour
 
         GameObject temp = Instantiate(textObj, transform.GetChild(0).GetChild(0));
         temp.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, yPos);
-        temp.GetComponent<Text>().text = input + '\n';
+        //temp.GetComponent<Text>().text = input + '\n';
+        temp.GetComponent<TextMeshProUGUI>().text = input + '\n';
         //textObj.transform.GetChild(0).GetChild(0).GetComponent<Text>().text += temp.GetComponent<Text>().text.repl + '\n';
 
         yield return new WaitForSeconds(.05f);

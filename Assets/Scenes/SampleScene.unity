@@ -1978,7 +1978,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2019,9 +2019,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textObj: {fileID: 391512678}
-  textComp: {fileID: 1523428487}
+  textComp: {fileID: 1363901689}
   charIndex: 1
-  tempGuy: {fileID: 0}
+  tempGuy: {fileID: 7004138840894017355, guid: df2c60e41d942e14d97dc17de3fb4fc4, type: 3}
   content: {fileID: 3292897882630982295, guid: ce6d5667f0606104aa6e3d395fdf0e35, type: 3}
 --- !u!1 &248549909
 GameObject:
@@ -2619,7 +2619,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 289329352}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229601475}
+        m_MethodName: TestText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &289329352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3405,7 +3416,7 @@ MonoBehaviour:
   m_Content: {fileID: 2049570621}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -3470,7 +3481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayDuration: 0.5
-  textObj: {fileID: 3292897882630982295, guid: ce6d5667f0606104aa6e3d395fdf0e35, type: 3}
+  textObj: {fileID: 6985513706881819245, guid: 04b423a2d9e7bc344b4164f4e0f1babe, type: 3}
 --- !u!1 &401039043
 GameObject:
   m_ObjectHideFlags: 0
@@ -18797,8 +18808,8 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: biggest chungus <color=red>NEVER</color> dies and you
-            hear it here <b>FIRST folks!</b>
+          m_StringArgument: biggest chungus <link="debug"><color=#ECD157>never</color></link>
+            dies ~~and you hear it here <b>FIRST folks!</b>
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2006041966

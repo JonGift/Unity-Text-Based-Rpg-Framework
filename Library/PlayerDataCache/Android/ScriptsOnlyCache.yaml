@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ContentController
     - DragItem
     - DragWindow
     - GameManager
@@ -8,6 +9,7 @@ ScriptsOnlyBuild:
     - ItemObject
     - ItemSlot
     - MenuController
+    - TextManager
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -40,6 +42,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -54,48 +57,60 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11244}
     - Class: 114
-      Script: {instanceID: 11342}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11556}
+      Script: {instanceID: 11344}
     - Class: 114
       Script: {instanceID: 11560}
     - Class: 114
       Script: {instanceID: 11610}
     - Class: 114
-      Script: {instanceID: 11784}
+      Script: {instanceID: 11660}
     - Class: 114
-      Script: {instanceID: 12104}
+      Script: {instanceID: 11786}
     - Class: 114
-      Script: {instanceID: 12206}
+      Script: {instanceID: 11806}
     - Class: 114
-      Script: {instanceID: 12246}
+      Script: {instanceID: 12108}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 12632}
+      Script: {instanceID: 12250}
     - Class: 114
-      Script: {instanceID: 12696}
+      Script: {instanceID: 12284}
     - Class: 114
-      Script: {instanceID: 12896}
+      Script: {instanceID: 12636}
     - Class: 114
-      Script: {instanceID: 12992}
+      Script: {instanceID: 12700}
+    - Class: 114
+      Script: {instanceID: 12902}
+    - Class: 114
+      Script: {instanceID: 12998}
     - Class: 114
       Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 13756}
+      Script: {instanceID: 13148}
     - Class: 114
-      Script: {instanceID: 13966}
+      Script: {instanceID: 13762}
     - Class: 114
-      Script: {instanceID: 14370}
+      Script: {instanceID: 13972}
+    - Class: 114
+      Script: {instanceID: 14376}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -117,6 +132,12 @@ ScriptsOnlyBuild:
     - Class: 225
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: aeb62f729c52c814dec86c47dcac1471
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -143,7 +164,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 6cd6ec8b10e29c16540c283cf59ac978
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuController
@@ -171,12 +192,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
-  - hash:
-      serializedVersion: 2
-      Hash: aeb62f729c52c814dec86c47dcac1471
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
   - hash:
       serializedVersion: 2
       Hash: 499fd23433e68e265d153aa6b95d0047
@@ -215,6 +230,12 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ContentController
+  - hash:
+      serializedVersion: 2
       Hash: 234d407605354852c48e57df17c9a1c6
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -243,6 +264,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 5df816293a59b9193ae5291fbdecb7a7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TextManager
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -323,7 +350,7 @@ ScriptsOnlyBuild:
     className: InventoryController
   - hash:
       serializedVersion: 2
-      Hash: 78664a3ff7eeb37b306342570dd71c55
+      Hash: c1544d5005edde805a4b08650bb22ee0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ItemSlot
@@ -389,7 +416,7 @@ ScriptsOnlyBuild:
     className: UIRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 68316afbe66a376626ae3ba04ae51edf
+      Hash: 139516b1d3fb0945f223e03b511a4c8b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ItemObject
@@ -411,6 +438,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: 235a1e8275c5d1ab2a1c0f017d90e1b5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PanelOpener
   - hash:
       serializedVersion: 2
       Hash: f36d10cc35a41e4c10aba86466a1ea58
@@ -443,7 +476,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 2ca53beed7fdd535d1e1b19cd179c646
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager

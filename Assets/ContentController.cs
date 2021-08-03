@@ -2,29 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.EventSystems;
 
-public class ContentController : MonoBehaviour
+public class ContentController : MonoBehaviour, IPointerClickHandler
 {
-    Text text;
+    TextMeshProUGUI text;
     bool done = false;
     float alpha = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        text = GetComponent<Text>();
-        /*text.text = "TEST!!!";
-        for (int i = 0; i < Random.Range(2, 150); i++)
-            text.text += i;
-        text.text += "\n";*/
+        text = GetComponent<TextMeshProUGUI>();
     }
 
     private void Update() {
         if (done)
-            Destroy(this);
+            return;
         alpha += 3;
         text.color = new Color(text.color.r, text.color.g, text.color.b, alpha / 255f);
         if (alpha > 255f)
             done = true;
+    }
+
+    public void OnPointerClick(PointerEventData eventData) {
+        int linkIndex = TMP_TextUtilities.FindIntersectingLink(text, Input.mousePosition, Camera.main);
+        if (linkIndex != -1) {
+            TMP_LinkInfo linkInfo = text.textInfo.linkInfo[linkIndex];
+            Debug.Log(linkInfo.GetLinkID());
+        }
     }
 }
