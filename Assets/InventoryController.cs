@@ -108,7 +108,7 @@ public class InventoryController : MonoBehaviour
     public ItemSlot GetNextOpenItemSlot() {
         foreach(ItemSlot slot in itemSlots) {
             Item item = slot.GetItem();
-            if (item == null)
+            if (item == null && !slot.hasItem())
                 return slot;
         }
 
@@ -118,7 +118,7 @@ public class InventoryController : MonoBehaviour
     public ItemSlot GetNextOpenUseSlot() {
         foreach (ItemSlot slot in itemSlots) {
             Item item = slot.GetItem();
-            if (item == null)
+            if (item == null && !slot.hasItem())
                 return slot;
         }
 
@@ -128,7 +128,7 @@ public class InventoryController : MonoBehaviour
     public ItemSlot GetNextOpenKeySlot() {
         foreach (ItemSlot slot in itemSlots) {
             Item item = slot.GetItem();
-            if (item == null)
+            if (item == null && !slot.hasItem())
                 return slot;
         }
 
@@ -137,7 +137,7 @@ public class InventoryController : MonoBehaviour
     public ItemSlot GetNextOpenEquipSlot() {
         foreach (ItemSlot slot in equipmentSlots) {
             Item item = slot.GetItem();
-            if (item == null)
+            if (item == null && !slot.hasItem())
                 return slot;
         }
 

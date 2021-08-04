@@ -7,6 +7,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 {
     public string attachedCharacter; // TODO: Change to characterclass
     public GameObject attachedItem; // TODO: Change this to an item.
+    public GameObject preAttachedItem;
     public InventoryController inventoryController;
     public string slotType = ""; // Can be empty. If not empty, it's specifically associated with a certain type of item (like a helmet)
     bool slotLocked = false;
@@ -17,9 +18,9 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     public bool acceptsEquipment = false;
     public bool lootWindow = false;
 
-    private void Start() {
-        if (attachedItem) {
-            AttachItem(attachedItem);
+    private void Awake() {
+        if (preAttachedItem) {
+            AttachItem(preAttachedItem);
         }
     }
 
@@ -83,7 +84,11 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     }
 
     public bool hasItem() {
-        return attachedItem != null;
+        if (preAttachedItem)
+            return true;
+        if (attachedItem)
+            return true;
+        return false;
     }
 
     // This function allows us to place items in an inventory without dragging them (ie right-click)
