@@ -11,12 +11,15 @@ public class TextManager : MonoBehaviour
     Queue<string> contentQueue;
     public GameObject textObj;
     Scrollbar scrollbar;
+    TextMeshProUGUI savedText;
+    public JournalController journal;
 
     // Start is called before the first frame update
     void Start()
     {
         contentQueue = new Queue<string>();
         scrollbar = transform.GetChild(1).GetComponent<Scrollbar>();
+        savedText = new TextMeshProUGUI();
     }
 
     // Update is called once per frame
@@ -71,5 +74,13 @@ public class TextManager : MonoBehaviour
 
         if(scrollbarValue < .005f)
             scrollbar.value = 0;
+    }
+
+    public void SaveContent() {
+        savedText.text = "";
+        foreach (TextMeshProUGUI t in transform.GetChild(0).GetChild(0).GetComponentsInChildren<TextMeshProUGUI>())
+            savedText.text += t.text;
+
+        journal.CreateJournalEntry(savedText);
     }
 }
