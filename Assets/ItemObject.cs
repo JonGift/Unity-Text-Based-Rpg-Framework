@@ -10,6 +10,7 @@ public class ItemObject : MonoBehaviour
     public bool temp;
     public string itemType = "";
     Text text;
+    public List<string> itemTypes;
 
     private void Awake() {
         text = transform.GetChild(0).GetChild(1).GetComponent<Text>();
@@ -22,6 +23,9 @@ public class ItemObject : MonoBehaviour
             text.text = item.Stack.ToString();
             text.transform.parent.gameObject.SetActive(true);
         }
+
+        if (itemTypes.Count > 0)
+            item.Types = itemTypes;
 
         if (item.Types.Count > 0)
             itemType = item.Types[0];
